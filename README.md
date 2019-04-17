@@ -1,2 +1,2 @@
 # pet-clinic
-Example projet to learn Spring framework
+Example project to learn Spring framework
