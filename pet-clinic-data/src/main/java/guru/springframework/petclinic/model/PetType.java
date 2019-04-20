@@ -4,10 +4,6 @@ public class PetType {
 
     private String type;
 
-    public PetType(String type) {
-        this.type = type;
-    }
-
     public String getType() {
         return type;
     }

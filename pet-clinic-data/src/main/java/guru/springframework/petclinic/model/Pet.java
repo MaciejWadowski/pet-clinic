@@ -1,6 +1,5 @@
 package guru.springframework.petclinic.model;
 
-
 import java.time.LocalDate;
 
 public class Pet {
@@ -8,14 +7,6 @@ public class Pet {
     private PetType petType;
     private Owner owner;
     private LocalDate birthDate;
-
-    public Pet() {}
-
-    public Pet(PetType petType, Owner owner, LocalDate birthDate) {
-        this.petType = petType;
-        this.owner = owner;
-        this.birthDate = birthDate;
-    }
 
     public PetType getPetType() {
         return petType;
