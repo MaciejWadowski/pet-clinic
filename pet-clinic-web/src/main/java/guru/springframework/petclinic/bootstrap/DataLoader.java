@@ -1,10 +1,13 @@
 package guru.springframework.petclinic.bootstrap;
 
 import guru.springframework.petclinic.model.Owner;
+import guru.springframework.petclinic.model.PetType;
 import guru.springframework.petclinic.model.Vet;
 import guru.springframework.petclinic.services.OwnerService;
+import guru.springframework.petclinic.services.PetTypeService;
 import guru.springframework.petclinic.services.VetService;
 import guru.springframework.petclinic.services.map.OwnerServiceMap;
+import guru.springframework.petclinic.services.map.PetTypeMapService;
 import guru.springframework.petclinic.services.map.VetServiceMap;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
@@ -15,20 +18,34 @@ public class DataLoader implements CommandLineRunner {
 
     private final OwnerService ownerService;
     private final VetService vetService;
+    private final PetTypeService petTypeService;
 
-    @Autowired
-    public DataLoader(OwnerService ownerService, VetService vetService) {
+    public DataLoader(OwnerService ownerService, VetService vetService, PetTypeService petTypeService) {
         this.ownerService = ownerService;
         this.vetService = vetService;
+        this.petTypeService = petTypeService;
     }
+
+    @Autowired
+
 
     public DataLoader() {
         ownerService = new OwnerServiceMap();
         vetService = new VetServiceMap();
+        petTypeService = new PetTypeMapService();
     }
 
     @Override
     public void run(String... args) throws Exception {
+
+        PetType dog = new PetType();
+        dog.setType("dog");
+        PetType savedDogType = petTypeService.save(dog);
+
+        PetType cat = new PetType();
+        cat.setType("cat");
+        PetType savedCatType = petTypeService.save(cat);
+
         Owner owner = new Owner();
         owner.setId(1L);
         owner.setFirstName("Michael");
