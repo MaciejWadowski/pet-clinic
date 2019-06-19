@@ -1,6 +1,9 @@
 package guru.springframework.petclinic.model;
 
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.Setter;
 
 import javax.persistence.*;
 import java.util.HashSet;
@@ -8,10 +11,10 @@ import java.util.Set;
 
 @Setter
 @Getter
-@NoArgsConstructor
 @AllArgsConstructor
 @Builder
 @Entity
+@MappedSuperclass
 @Table(name = "owners")
 public class Owner extends Person {
 
