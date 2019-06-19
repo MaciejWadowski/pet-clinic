@@ -58,14 +58,14 @@ public class DataLoader implements CommandLineRunner {
         dentistry.setDescription("Dentistry");
         Speciality savedDentistry = specialityService.save(dentistry);
 
-        Owner owner = new Owner();
+        Owner owner = Owner.builder().build();
         owner.setId(1L);
         owner.setFirstName("Michael");
         owner.setLastName("Weston");
 
         ownerService.save(owner);
 
-        Owner owner1 = new Owner();
+        Owner owner1 = Owner.builder().build();
         owner1.setId(2L);
         owner1.setFirstName("Wojtek");
         owner1.setLastName("Wadio");
@@ -85,7 +85,7 @@ public class DataLoader implements CommandLineRunner {
 
         System.out.println("Loader owners...");
 
-        Owner owner2 = new Owner();
+        Owner owner2 = Owner.builder().build();
         owner2.setId(3L);
         owner2.setFirstName("Fiodor");
         owner2.setLastName("Fetr");
