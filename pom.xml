@@ -28,7 +28,6 @@
     <dependencies>
 
     </dependencies>
-
     <build>
         <plugins>
             <plugin>
@@ -38,6 +37,7 @@
                     <mainClass>guru.springframework.petclinic.PetClinicApplication</mainClass>
                 </configuration>
             </plugin>
+
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-release-plugin</artifactId>
