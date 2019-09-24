@@ -53,8 +53,8 @@ class PetControllerTest {
         owner = new Owner();
         owner.setId(1L);
         petTypes = new HashSet<>();
-        petTypes.add(PetType.builder().id(1L).type("Dog").build());
-        petTypes.add(PetType.builder().id(2L).type("Cat").build());
+        petTypes.add(PetType.builder().id(1L).name("Dog").build());
+        petTypes.add(PetType.builder().id(2L).name("Cat").build());
     }
 
     @Test
