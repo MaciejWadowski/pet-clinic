@@ -17,8 +17,9 @@
         </thead>
         <tbody>
         <tr th:each="vet : ${vets}">
-            <td th:text="${vet.id}">1</td>
-            <td th:text="${vet.firstName}">Joe</td>
+            <td th:text="${vet.firstName + ' ' + vet.lastName}">1</td>
+            <td><span th:each="specialty: ${vet.specialities}"
+                      th:text="${specialty.description + ' '}"/><span th:if="${vet?.specialities?.size() == 0}">none</span></td>
             <td th:text="${vet.lastName}">Doe</td>
         </tr>
         </tbody>
