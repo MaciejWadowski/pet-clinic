@@ -1,0 +1,23 @@
+{
+      "ValidatorDef" : {
+        "description" : "Information on validation purpose (only needed in case that value is provided as free text)",
+        "properties" : {
+          "Max" : {
+            "type" : "integer"
+          },
+          "Min" : {
+            "type" : "integer"
+          },
+          "mandatory" : {
+            "type" : "boolean"
+          },
+          "mustBeChanged" : {
+            "type" : "boolean"
+          },
+          "pattern" : {
+            "type" : "string"
+          }
+        },
+        "type" : "object"
+      }
+}
