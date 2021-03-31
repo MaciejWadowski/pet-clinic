@@ -1,0 +1,17 @@
+"ActiveRestrictionsSummary" : {
+        "properties" : {
+          "currentValue" : {
+            "type" : "boolean"
+          },
+          "originalValue" : {
+            "type" : "boolean"
+          },
+          "restrictionSpecificationId" : {
+            "type" : "string"
+          },
+          "restrictionSpecificationName" : {
+            "type" : "string"
+          }
+        },
+        "type" : "object"
+        }
